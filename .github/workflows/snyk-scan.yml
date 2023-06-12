@@ -3,7 +3,7 @@ name: CI-CD with GitHub Actions (DevSecOps)
 on: push
 jobs:
   security:
-    needs: build
+    needs: build-with-maven
     runs-on: ubuntu-latest
     steps: 
     - uses: actions/checkout@master
@@ -22,7 +22,7 @@ jobs:
 
 
       
-  build:
+  build-with-maven:
     runs-on: ubuntu-latest
 
     steps:
